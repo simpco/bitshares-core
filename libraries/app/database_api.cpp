@@ -316,7 +316,7 @@ void database_api::set_subscribe_callback( std::function<void(const variant&)> c
 void database_api_impl::set_subscribe_callback( std::function<void(const variant&)> cb, bool notify_remove_create )
 {
    _subscribe_callback = cb;
-   _notify_remove_create = notify_remove_create;
+   //_notify_remove_create = notify_remove_create;
    _subscribed_accounts.clear();
 
    static fc::bloom_parameters param;
