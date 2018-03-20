@@ -450,7 +450,9 @@ void database::init_genesis(const genesis_state_type& genesis_state)
       auto itr = assets_by_symbol.find(symbol);
 
       // TODO: This is temporary for handling BTS snapshot
-      if( symbol == "JMC" )
+      if( symbol == "BTS" )
+          itr = assets_by_symbol.find(GRAPHENE_SYMBOL);
+      if( symbol == "GPH" )
           itr = assets_by_symbol.find(GRAPHENE_SYMBOL);
 
       FC_ASSERT(itr != assets_by_symbol.end(),
